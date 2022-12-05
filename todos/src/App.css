@@ -1,0 +1,22 @@
+.container {
+  width: 90%;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container .todo-items {
+  min-width: 60vw;
+}
+
+.container .todo-items .title {
+  text-align: center;
+}
+
+.container .todos {
+  width: 100%;
+}
+/*# sourceMappingURL=App.css.map */

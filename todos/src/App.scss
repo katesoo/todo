@@ -1,0 +1,16 @@
+
+.container{
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  .todo-items{
+    min-width: 60vw;
+    .title{
+      text-align: center;
+    }
+  }
+  .todos{
+    width: 100%;
+  }
+}

@@ -1,0 +1,140 @@
+.todo-item {
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 6px 6px 10px rgba(128, 140, 167, 0.4), -6px -6px 10px rgba(128, 140, 167, 0.4);
+          box-shadow: 6px 6px 10px rgba(128, 140, 167, 0.4), -6px -6px 10px rgba(128, 140, 167, 0.4);
+}
+
+.todo-item .item-name {
+  height: 20px;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.todo-item .text-name {
+  width: 80%;
+  border: none;
+  font-size: 18px;
+  color: #3d3c3c;
+}
+
+.todo-item .done {
+  color: #afa4a4;
+}
+
+.todo-item .edit {
+  background-image: url("../assets/icons/edit.svg");
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  margin-right: 10px;
+}
+
+.todo-item .delete {
+  background-image: url("../assets/icons/delete.svg");
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+}
+
+.todo-item .new-item-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+}
+
+.todo-item .new-item-content h4 {
+  margin: 0;
+  padding: 5px;
+}
+
+.todo-item .new-item-content input {
+  border: none;
+  border-bottom: 1px solid #808ca7;
+  width: 60%;
+}
+
+.todo-item .tag-word {
+  color: #070379;
+}
+
+.todo-item .add-button {
+  padding: 5px 10px;
+  border-radius: 10%;
+  border: 2px solid #757e92;
+  margin-right: 20px;
+}
+
+.todo-item .tags {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.todo-item .tags .close {
+  background-image: url("../assets//icons/close.svg");
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+  margin: 10px 5px 0px 0px;
+}
+
+.todo-item .tags .edit-tag {
+  background-image: url("../assets/icons/edit.svg");
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+  margin: 10px 5px 0px 0px;
+}
+
+.todo-item .tags .save {
+  background-image: url("../assets/icons/save.svg");
+}
+
+.todo-item .tags .tag-changer {
+  height: 20px;
+  margin-top: 5px;
+}
+
+.todo-item .tag-pannel {
+  background-color: #d5e1f3;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #070379;
+  margin: 5px;
+}
+
+.new-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.filter-part {
+  color: #070379;
+}
+
+.filter-part ul {
+  padding: 5px;
+  list-style: none;
+}
+
+.filter-part ul li {
+  padding: 5px 0 5px;
+}
+/*# sourceMappingURL=Filter.css.map */

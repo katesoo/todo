@@ -1,0 +1,111 @@
+$shadowColor: #808ca7;
+$textColor: rgb(61, 60, 60);
+$doneColor: rgb(175, 164, 164);
+$tagColor: rgb(7, 3, 121);
+$taskBackground: rgb(213, 225, 243);
+
+.todo-item {
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px rgba($color: $shadowColor, $alpha: 0.4),
+    -6px -6px 10px rgba($color: $shadowColor, $alpha: 0.4);
+
+  // color: rgb(29, 29, 29);
+  .item-name {
+    height: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: start;
+  }
+
+  .text-name {
+    width: 80%;
+    border: none;
+    font-size: 18px;
+    color: $textColor;
+  }
+
+  .done {
+    color: $doneColor;
+  }
+
+  .edit {
+    background-image: url("../assets/icons/edit.svg");
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    margin-right: 10px;
+  }
+  .delete {
+    background-image: url("../assets/icons/delete.svg");
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+  }
+
+  .new-item-content {
+    display: flex;
+    height: 30px;
+
+    h4 {
+      margin: 0;
+      padding: 5px;
+    }
+
+    input {
+      border: none;
+      border-bottom: 1px solid $shadowColor;
+      width: 60%;
+    }
+  }
+  .tag-word {
+    color: $tagColor;
+  }
+  .add-button {
+    padding: 5px 10px;
+    border-radius: 10%;
+    border: 2px solid #757e92;
+    margin-right: 20px;
+  }
+
+  .tags {
+    margin-top: 10px;
+    display: flex;
+    .close {
+      background-image: url("../assets//icons/close.svg");
+      width: 15px;
+      height: 15px;
+      background-size: cover;
+      margin: 10px 5px 0px 0px;
+    }
+    .edit-tag {
+      background-image: url("../assets/icons/edit.svg");
+      width: 15px;
+      height: 15px;
+      background-size: cover;
+      margin: 10px 5px 0px 0px;
+    }
+    .save {
+      background-image: url("../assets/icons/save.svg");
+    }
+    .tag-changer {
+      height: 20px;
+      margin-top: 5px;
+    }
+  }
+  .tag-pannel {
+    background-color: $taskBackground;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: $tagColor;
+    margin: 5px;
+  }
+}
+
+.new-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

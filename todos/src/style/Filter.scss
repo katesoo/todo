@@ -1,0 +1,12 @@
+@import './Todo.scss';
+
+.filter-part{
+  color: $tagColor;
+  ul{
+    padding: 5px;
+    list-style: none;
+    li{
+      padding: 5px 0 5px;
+    }
+  }
+}
