@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { ACTIONS } from "../Reduce";
+import { ACTIONS } from "./Reduce";
 
 interface ITagProps {
   tagsArray: string[];

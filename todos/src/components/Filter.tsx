@@ -1,6 +1,6 @@
 import React from "react";
 import '../style/Filter.scss'
-import { ACTIONS } from "../Reduce";
+import { ACTIONS } from "./Reduce";
 
 interface TTags {
   tags: string[],

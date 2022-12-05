@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ACTIONS } from "../Reduce";
+import { ACTIONS } from "./Reduce";
 import "../style/Todo.scss";
 import { todo } from "./Todo";
 
@@ -39,7 +39,7 @@ const NewTodo = ({ dispatch }: INewTodo) => {
 
   return (
     <div>
-      <h2 className="title">Add Task:</h2>
+      <h2 style={{textAlign: 'center'}}>Add Task:</h2>
       <div className="todo-item new-item">
         <div style={{ width: "100%" }}>
           <div className="new-item-content">

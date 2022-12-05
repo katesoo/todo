@@ -3,7 +3,7 @@ import "./App.scss";
 import Filter from "./components/Filter";
 import NewTodo from "./components/NewTodo";
 import Todo from "./components/Todo";
-import { ACTIONS, initialState, reducer } from "./Reduce";
+import { ACTIONS, initialState, reducer } from "./components/Reduce";
 
 const App = memo(() => {
   const [{tasks, tags, activeTag}, dispatch] = useReducer(reducer, initialState);

@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useReducer, useRef, useState } from "react";
-import { ACTIONS, IAction } from "../Reduce";
+import { ACTIONS, IAction } from "./Reduce";
 import "../style/Todo.scss";
 import ChangePannel from "./ChangePannel";
 import Tag from "./Tag";

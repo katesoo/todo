@@ -1,6 +1,6 @@
-import { todo } from "./components/Todo";
+import { todo } from "./Todo";
 
-const tasks: todo[] = require("./todo.json");
+const tasks: todo[] = require("../todo.json");
 
 export const ACTIONS = {
   DELETE_TODO: "DELETE_TODO",
@@ -89,7 +89,7 @@ export const reducer = (state = initialState, action: IAction) => {
         }
         return task;
       }),
-      tags: Array.from(new Set(state.tasks.map((task) => task.tags.split(",")).flat())),
+      tags: Array.from(new Set(state.tasks.map((task) => task.tags.split(/[\s,]/g)).flat())),
     }
     default:
       return state;

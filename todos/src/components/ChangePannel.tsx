@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ACTIONS } from "../Reduce";
+import { ACTIONS } from "./Reduce";
 
 interface IChangePannel {
   id: number;
@@ -29,15 +29,16 @@ const ChangePannel = ({
   const changeToDoContentHandler = () => {
     const array = inputValue.match(/#\S\w*/g);
     if (array?.length) {
-      const textWithoutHash = array?.forEach((tag) => tag.replace(/#/g, ""));
+      const textWithoutHash = array?.map((tag) => tag.replace(/#/g, ""));
       dispatch({
         type: ACTIONS.ADD_TAG,
         payload: [id, Array.from(new Set(array)).join(",")],
       });
 
-      dispatch({ type: ACTIONS.CHANGE_TAGS, payload: new Set(array) });
-      dispatch({ type: ACTIONS.EDIT_TODO, payload: [id, textWithoutHash] });
+      dispatch({ type: ACTIONS.CHANGE_TAGS, payload: new Set(textWithoutHash) });
     }
+    
+    dispatch({ type: ACTIONS.EDIT_TODO, payload: [id, inputValue.replaceAll('#', '')] });
     setChange();
   };
 
