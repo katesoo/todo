@@ -32,7 +32,7 @@ const ChangePannel = ({
       const textWithoutHash = array?.map((tag) => tag.replace(/#/g, ""));
       dispatch({
         type: ACTIONS.ADD_TAG,
-        payload: [id, Array.from(new Set(array)).join(",")],
+        payload: [id, Array.from(new Set(textWithoutHash)).join(",")],
       });
 
       dispatch({ type: ACTIONS.CHANGE_TAGS, payload: new Set(textWithoutHash) });

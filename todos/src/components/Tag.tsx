@@ -32,13 +32,13 @@ const Tag = ({ tagsArray, dispatch, id }: ITagProps) => {
   return (
     <div>
       <div className="tags">
-        {tagsArray.map((tag) => (
-          <>
-            <span key={tag} className="tag-pannel">
+        {tagsArray.map((tag,i) => (
+          <div key={i} style={{display: 'flex'}}>
+            <span className="tag-pannel">
               {tag}
             </span>
-            <div className="close" onClick={() => deleteTag(tag)}></div>
-          </>
+            <div key={i} className="close" onClick={() => deleteTag(tag)}></div>
+          </div>
         ))}
 
         <div

@@ -31,6 +31,7 @@ const Todo = ({
   const [Done, setDone] = useReducer(not, done);
   const [Task, setTask] = useState<string>(task);
   const [change, setChange] = useReducer(not, false);
+  const [newContent, setContent] = useState(content);
 
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -42,6 +43,16 @@ const Todo = ({
       e.target.classList.add("done");
     }
   };
+  const activeChange = () => {    
+    setChange();
+    if(!change && newContent) {
+      let contentText = newContent;
+      tagsArray.map(tag => contentText = contentText.replaceAll(`${tag}`, `#${tag}`));
+      setContent(contentText);
+    } if(change) {
+      setContent(content);
+    }
+  }
   
   return (
     <div className="todo-item">
@@ -53,10 +64,10 @@ const Todo = ({
           onChange={handleChange}
           className={`text-name ${Done && "done"}`}
         ></input>
-        <div className="edit" onClick={setChange}></div>
+        <div className="edit" onClick={activeChange}></div>
         <div className="delete" onClick={deleteTask(id)}></div>
       </div>
-      <div className={Done ? "done" : ""}>{content}</div>
+      <div className={Done ? "done" : ""}>{newContent}</div>
       {change && (
         <ChangePannel
           tags={tags}

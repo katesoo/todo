@@ -12,7 +12,10 @@ $taskBackground: rgb(213, 225, 243);
   box-shadow: 6px 6px 10px rgba($color: $shadowColor, $alpha: 0.4),
     -6px -6px 10px rgba($color: $shadowColor, $alpha: 0.4);
 
-  // color: rgb(29, 29, 29);
+  // .active-tag{
+  //   color: $tagColor;
+  //   font-weight: bold;
+  // }
   .item-name {
     height: 20px;
     padding: 5px;
